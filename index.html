@@ -30,7 +30,7 @@ body {
   overflow: hidden;
 }
 
-/* ✅ NEW BRAND BAR */
+/* Brand bar */
 .brand-bar {
   background: #FFFFFF;
   padding: 25px 20px;
@@ -44,7 +44,7 @@ body {
   height: auto;
 }
 
-/* Existing header */
+/* Header */
 .header {
   background: linear-gradient(135deg, #4AC6C2 0%, #00465F 100%);
   color: white;
@@ -65,6 +65,7 @@ body {
 
 .content { padding: 40px 30px; }
 
+/* How it works */
 .how-it-works {
   background: #FDF3E7;
   border-radius: 12px;
@@ -132,13 +133,13 @@ body {
   font-size: 0.9em;
 }
 
-/* ✅ MOVED BELOW HOW IT WORKS */
+/* Why students love this */
 .pricing-info {
   background: #D3F3EE;
   border: 2px solid #4AC6C2;
   border-radius: 12px;
   padding: 25px;
-  margin-bottom: 35px;
+  margin-bottom: 40px;
   text-align: center;
 }
 
@@ -149,6 +150,7 @@ body {
   font-size: 1.3em;
 }
 
+/* CTA Section Restored */
 .cta-section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -162,6 +164,13 @@ body {
   border-radius: 12px;
   padding: 35px 25px;
   text-align: center;
+  transition: all 0.3s ease;
+}
+
+.cta-card:hover {
+  border-color: #4AC6C2;
+  box-shadow: 0 6px 20px rgba(74,198,194,0.15);
+  transform: translateY(-3px);
 }
 
 .cta-card h3 {
@@ -196,14 +205,6 @@ body {
   color: white;
 }
 
-.restrictions {
-  background: #FDF3E7;
-  border: 2px solid #FFB385;
-  border-radius: 12px;
-  padding: 25px;
-  margin-bottom: 30px;
-}
-
 .footer {
   background: #ECEFF1;
   padding: 25px 30px;
@@ -225,7 +226,6 @@ body {
 <body>
 <div class="container">
 
-  <!-- ✅ Brand Section -->
   <div class="brand-bar">
     <img src="Storage Buddy - Primary Logo_Header.png" class="brand-logo" alt="Storage Buddy">
   </div>
@@ -239,7 +239,6 @@ body {
 
     <div class="how-it-works">
       <h3>How It Works</h3>
-
       <div class="steps">
         <div class="step">
           <div class="step-number">1</div>
@@ -275,7 +274,28 @@ body {
       <p><strong>50% cheaper</strong> • <strong>No rental cars needed</strong> • <strong>Money stays in the student community</strong></p>
     </div>
 
-    <!-- CTA SECTION UNCHANGED -->
+    <!-- ✅ Restored CTA Section -->
+    <div class="cta-section">
+      <div>
+        <div class="cta-card">
+          <h3>Need Summer Break Storage?</h3>
+          <p>We match you with verified student hosts for summer storage.</p>
+          <a href="YOUR_SUMMER_FORM_LINK" class="btn btn-primary">Join the Matching List</a>
+        </div>
+
+        <div class="cta-card">
+          <h3>Need Storage Right Now?</h3>
+          <p>We connect you with available student hosts immediately.</p>
+          <a href="YOUR_CURRENT_STORAGE_FORM_LINK" class="btn btn-primary">Find Current Storage</a>
+        </div>
+      </div>
+
+      <div class="cta-card">
+        <h3>Have Extra Space?</h3>
+        <p>Earn money by hosting items for fellow Columbia students.</p>
+        <a href="YOUR_HOST_FORM_LINK" class="btn btn-secondary">Become a Host</a>
+      </div>
+    </div>
 
   </div>
 
