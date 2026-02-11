@@ -56,17 +56,18 @@
 
     .content { padding: 40px 30px; }
 
+    /* tightened a bit for better proportions */
     .how-it-works {
       background: #FDF3E7;
       border-radius: 12px;
-      padding: 35px;
-      margin-bottom: 40px;
+      padding: 28px 30px;
+      margin-bottom: 35px;
     }
 
     .how-it-works h3 {
       font-family: 'Poppins', sans-serif;
       color: #00465F;
-      margin-bottom: 25px;
+      margin-bottom: 22px;
       font-size: 1.6em;
       text-align: center;
       font-weight: 600;
@@ -76,18 +77,18 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 20px;
-      margin-top: 25px;
+      margin-top: 20px;
     }
 
     .step {
       background: white;
-      padding: 25px 20px;
+      padding: 22px 20px;            /* slightly tighter */
       border-radius: 12px;
       border-left: 4px solid #4AC6C2;
       box-shadow: 0 2px 8px rgba(74,198,194,0.1);
       transition: all 0.3s ease;
-      overflow: hidden;     /* prevents any overlap */
-      text-align: center;   /* keeps icon + text tidy */
+      overflow: hidden;              /* prevents overlap */
+      text-align: center;            /* consistent alignment */
     }
 
     .step:hover {
@@ -110,9 +111,9 @@
       font-size: 0.9em;
     }
 
-    /* ✅ FIX: constrain the Step 1 image so it can’t blow up the layout */
+    /* ✅ larger icon without breaking layout */
     .step-icon-wrap {
-      height: 95px;
+      height: 95px;                  /* ~2x bigger */
       display: flex;
       align-items: center;
       justify-content: center;
@@ -278,7 +279,9 @@
       .content { padding: 30px 20px; }
       .steps { grid-template-columns: 1fr; }
       .cta-section { grid-template-columns: 1fr; }
-      .how-it-works { padding: 25px 20px; }
+      .how-it-works { padding: 24px 20px; }
+      .step-icon-wrap { height: 90px; }
+      .step-icon { max-height: 90px; max-width: 90px; }
     }
   </style>
 </head>
@@ -336,8 +339,8 @@
           <div class="cta-card">
             <h3>Need Summer Break Storage?</h3>
             <p style="margin-bottom: 20px; font-size: 0.85em;">
-              We will go to work to match you with students who have spare space to store your belongings over the
-              summer break period. We will provide you with several options, and you choose the one you like best.
+              We will go to work to match you with students who have spare space to store your belongings over the summer
+              break period. We will provide you with several options, and you choose the one you like best.
             </p>
             <a
               href="https://docs.google.com/forms/d/e/1FAIpQLSfDOOtcLah9dzSFeLmSiFCGMDiU3vi6Fjmj5AELJm899ut8vw/viewform?usp=publish-editor"
