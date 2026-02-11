@@ -36,8 +36,23 @@
     .header {
       background: linear-gradient(135deg, #4AC6C2 0%, #00465F 100%);
       color: white;
-      padding: 50px 30px;
+      padding: 40px 30px 50px;
       text-align: center;
+    }
+
+    /* ✅ Storage Buddy logo at top of header */
+    .header-logo-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+
+    .header-logo {
+      max-width: 240px;
+      width: 100%;
+      height: auto;
+      display: block;
     }
 
     .header h1 {
@@ -56,7 +71,6 @@
 
     .content { padding: 40px 30px; }
 
-    /* tightened a bit for better proportions */
     .how-it-works {
       background: #FDF3E7;
       border-radius: 12px;
@@ -82,13 +96,13 @@
 
     .step {
       background: white;
-      padding: 22px 20px;            /* slightly tighter */
+      padding: 22px 20px;
       border-radius: 12px;
       border-left: 4px solid #4AC6C2;
       box-shadow: 0 2px 8px rgba(74,198,194,0.1);
       transition: all 0.3s ease;
-      overflow: hidden;              /* prevents overlap */
-      text-align: center;            /* consistent alignment */
+      overflow: hidden;
+      text-align: center;
     }
 
     .step:hover {
@@ -111,9 +125,9 @@
       font-size: 0.9em;
     }
 
-    /* ✅ larger icon without breaking layout */
+    /* ✅ shared icon sizing for all three steps */
     .step-icon-wrap {
-      height: 95px;                  /* ~2x bigger */
+      height: 95px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -274,6 +288,8 @@
     .footer strong { color: #00465F; }
 
     @media (max-width: 768px) {
+      .header { padding: 35px 20px 45px; }
+      .header-logo { max-width: 210px; }
       .header h1 { font-size: 1.9em; }
       .header p { font-size: 1em; }
       .content { padding: 30px 20px; }
@@ -289,6 +305,15 @@
 <body>
   <div class="container">
     <div class="header">
+      <!-- ✅ Storage Buddy logo (place this image in same folder as this HTML or update path) -->
+      <div class="header-logo-wrap">
+        <img
+          src="Storage Buddy - Primary Logo_Header.png"
+          alt="Storage Buddy"
+          class="header-logo"
+        />
+      </div>
+
       <h1>Columbia University<br />Student Storage Match</h1>
       <p>Affordable, convenient storage for students, by students</p>
     </div>
@@ -300,25 +325,27 @@
         <div class="steps">
           <div class="step">
             <div class="step-number">1</div>
-
             <div class="step-icon-wrap">
               <img src="Sign_up.png" alt="Sign up" class="step-icon" />
             </div>
-
             <h4>Sign Up</h4>
             <p>Tell us what you need (storage) or what you have (space to offer)</p>
           </div>
 
           <div class="step">
             <div class="step-number">2</div>
-            <div class="step-icon-wrap" aria-hidden="true" style="font-size: 2.5em;">✅</div>
+            <div class="step-icon-wrap">
+              <img src="Verified student.png" alt="Verified student" class="step-icon" />
+            </div>
             <h4>We Verify Students</h4>
             <p>We check UNI credentials to ensure both hosts and seekers are verified Columbia students</p>
           </div>
 
           <div class="step">
             <div class="step-number">3</div>
-            <div class="step-icon-wrap" aria-hidden="true" style="font-size: 2.5em;">🤝</div>
+            <div class="step-icon-wrap">
+              <img src="Booking complete.png" alt="Booking complete" class="step-icon" />
+            </div>
             <h4>We Match You</h4>
             <p>We'll connect you with a compatible student host or storage seeker</p>
           </div>
